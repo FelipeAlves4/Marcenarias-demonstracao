@@ -2,19 +2,19 @@
 export const ASSETS = "https://dipieva.com.br/assets";
 
 export const MARCA = {
-  nome: "Di Pieva Ambientes Planejados",
-  whatsapp: "5514996843335",
-  whatsappExibicao: "(14) 99684-3335",
+  nome: "LINHARA Ambientes Planejados",
+  whatsapp: "5514996954298",
+  whatsappExibicao: "(14) 99695-4298",
   instagram: "https://www.instagram.com/dipievaplanejados/",
   instagramUser: "@dipievaplanejados",
   facebook: "https://www.facebook.com/dipievaplanejados/",
-  enderecoRua: "Av. Santo Antônio, 421",
-  enderecoBairro: "Centro · Marília/SP",
-  mapa: "https://www.google.com/maps/search/?api=1&query=Av.+Santo+Ant%C3%B4nio%2C+421+-+Centro%2C+Mar%C3%ADlia+-+SP",
+  enderecoRua: "",
+  enderecoBairro: "",
+  mapa: "",
   cnpj: "47.520.151/0001-34",
 };
 
-export const MSG_PADRAO = "Olá! Vim pelo site da Di Pieva e quero conversar sobre um projeto.";
+export const MSG_PADRAO = "Olá! Vim pelo site da LINHARA e quero conversar sobre um projeto.";
 
 export function linkWhats(msg?: string) {
   const base = `https://wa.me/${MARCA.whatsapp}`;

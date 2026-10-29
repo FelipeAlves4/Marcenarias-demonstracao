@@ -1,6 +1,6 @@
-# Di Pieva Ambientes Planejados
+# LINHARA Ambientes Planejados
 
-Site institucional da Di Pieva Ambientes Planejados, desenvolvido por Alves Web Studio.
+Site institucional da LINHARA Ambientes Planejados, desenvolvido por Alves Web Studio.
 
 ## Desenvolvimento
 

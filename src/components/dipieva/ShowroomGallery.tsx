@@ -10,6 +10,7 @@ const FOTOS = [
 
 export function ShowroomGallery() {
   const S = `${ASSETS}/img/showroom`;
+  const mostrarEndereco = Boolean(MARCA.enderecoRua || MARCA.enderecoBairro || MARCA.mapa);
   return (
     <section className="section showroom" id="showroom" style={{ paddingTop: 0 }}>
       <div className="wrap">
@@ -37,17 +38,19 @@ export function ShowroomGallery() {
             </figure>
           ))}
         </div>
-        <div className="endereco revelar">
-          <Icon id="i-pin" className="pin" />
-          <div>
-            <strong>{MARCA.enderecoRua}</strong>
-            <span>{MARCA.enderecoBairro} · antes Breda Móveis Planejados, hoje Di Pieva</span>
+        {mostrarEndereco && (
+          <div className="endereco revelar">
+            <Icon id="i-pin" className="pin" />
+            <div>
+              <strong>{MARCA.enderecoRua}</strong>
+              <span>{MARCA.enderecoBairro} · LINHARA Ambientes Planejados</span>
+            </div>
+            <div className="acoes">
+              {MARCA.mapa && <a className="btn btn-ghost" href={MARCA.mapa} target="_blank" rel="noopener">Como chegar</a>}
+              <WaLink className="btn" msg="Olá! Quero agendar uma visita ao showroom da LINHARA."><Icon id="i-wa" className="wa-dot" />Agendar visita</WaLink>
+            </div>
           </div>
-          <div className="acoes">
-            <a className="btn btn-ghost" href={MARCA.mapa} target="_blank" rel="noopener">Como chegar</a>
-            <WaLink className="btn" msg="Olá! Quero agendar uma visita ao showroom da Di Pieva."><Icon id="i-wa" className="wa-dot" />Agendar visita</WaLink>
-          </div>
-        </div>
+        )}
       </div>
     </section>
   );

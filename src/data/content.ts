@@ -40,7 +40,7 @@ export const PERGUNTAS: Pergunta[] = [
 export type Respostas = Record<Pergunta["nome"], string[]> & { nome: string; local: string };
 
 export function montarMensagem(r: Respostas) {
-  const linhas = ["Olá! Vim pelo site da Di Pieva e quero um orçamento."];
+  const linhas = ["Olá! Vim pelo site da LINHARA e quero um orçamento."];
   if (r.nome.trim()) linhas.push("Meu nome: " + r.nome.trim());
   linhas.push("Ambientes: " + (r.ambiente.join(", ") || "a definir"));
   linhas.push("Imóvel: " + (r.imovel[0] || "a definir"));

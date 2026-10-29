@@ -11,7 +11,7 @@ import { ShowroomGallery } from "@/components/dipieva/ShowroomGallery";
 import { QuoteWizard } from "@/components/dipieva/QuoteWizard";
 import { FAQ, FinalCta, FloatingWhatsApp, Footer } from "@/components/dipieva/Footer";
 
-const TITLE = "Di Pieva Ambientes Planejados | Móveis planejados em Marília";
+const TITLE = "LINHARA Ambientes Planejados | Móveis planejados em Marília";
 const DESC =
   "Cozinhas, dormitórios, closets e ambientes comerciais sob medida. Projetado em 3D, fabricado em Marília e montado pela nossa equipe.";
 const OG_IMG = "https://dipieva.com.br/assets/img/showroom/hero-1600.jpg";

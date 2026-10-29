@@ -1,6 +1,6 @@
 /* =========================================================
-   Di Pieva Ambientes Planejados — site
-   Paleta tirada da marca: grafite do logo, creme quente e madeira.
+   LINHARA Ambientes Planejados — site
+   Paleta derivada da marca: grafite, branco arquitetônico e madeira clara.
    ========================================================= */
 @font-face { font-family: "Lora"; src: url("https://dipieva.com.br/assets/fonts/lora-var.woff") format("woff"); font-weight: 400 700; font-style: normal; font-display: swap; }
 @font-face { font-family: "Lora"; src: url("https://dipieva.com.br/assets/fonts/lora-italic-var.woff") format("woff"); font-weight: 400 700; font-style: italic; font-display: swap; }
@@ -9,16 +9,16 @@
 @font-face { font-family: "Poppins"; src: url("https://dipieva.com.br/assets/fonts/poppins-500.woff") format("woff"); font-weight: 500; font-display: swap; }
 
 :root {
-  --ink: #1E1C1A;          /* grafite quente (logo) */
-  --ink-2: #34302C;
-  --ink-muted: #6B645C;
-  --paper: #F6F2EC;        /* creme */
-  --paper-2: #EDE6DC;
-  --sand: #E3D8C8;
-  --line: #D8CEC0;
-  --wood: #8A5D37;         /* nogal — contraste AA sobre o fundo claro */
-  --wood-2: #7A5232;
-  --wood-soft: #C9A47F;
+  --ink: #2B2B2A;          /* grafite do logotipo */
+  --ink-2: #41403E;
+  --ink-muted: #6B6761;
+  --paper: #FBFAF8;        /* branco arquitetônico */
+  --paper-2: #F2EDE7;
+  --sand: #E5D7C9;
+  --line: #DDD4CB;
+  --wood: #8E6848;         /* madeira da assinatura */
+  --wood-2: #735033;
+  --wood-soft: #C69F7C;
   --white: #FFFDF9;
   --wa: #25D366;
   --radius: 14px;
@@ -71,17 +71,16 @@ h3 { font-size: clamp(21px, 2vw, 25px); line-height: 1.25; }
 .link-arrow { display: inline-flex; align-items: center; gap: 8px; font-weight: 500; text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 2px; }
 
 /* ---------- cabeçalho ---------- */
-.header { position: fixed; inset: 0 0 auto 0; z-index: 50; color: var(--paper); transition: background .35s var(--ease), color .35s var(--ease), box-shadow .35s var(--ease), transform .35s var(--ease); }
-.header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 78px; }
-.header.solid { background: rgba(246,242,236,.94); color: var(--ink); box-shadow: 0 1px 0 var(--line); backdrop-filter: saturate(1.2) blur(10px); -webkit-backdrop-filter: saturate(1.2) blur(10px); }
+.header { position: fixed; inset: 0 0 auto 0; z-index: 50; color: var(--ink); background: rgba(255,255,255,.96); box-shadow: 0 1px 0 var(--line); backdrop-filter: saturate(1.2) blur(10px); -webkit-backdrop-filter: saturate(1.2) blur(10px); transition: background .35s var(--ease), color .35s var(--ease), box-shadow .35s var(--ease), transform .35s var(--ease); }
+.header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 82px; }
+.header.solid { background: rgba(255,255,255,.98); color: var(--ink); }
 .brand { display: inline-flex; align-items: center; text-decoration: none; color: inherit; }
-.brand svg { height: 34px; width: auto; }
+.brand-mark { display: block; width: 210px; height: auto; }
 .nav { display: flex; align-items: center; gap: clamp(18px, 2.4vw, 34px); }
 .nav a { text-decoration: none; font-size: 15px; opacity: .92; position: relative; }
 .nav a::after { content: ""; position: absolute; left: 0; right: 100%; bottom: -6px; height: 1px; background: currentColor; transition: right .3s var(--ease); }
 .nav a:hover::after { right: 0; }
 .header .btn { min-height: 44px; padding: 0 20px; font-size: 15px; }
-.header:not(.solid) .btn { --bg: var(--paper); --fg: var(--ink); }
 .menu-btn { display: none; width: 46px; height: 46px; border-radius: 50%; border: 1px solid currentColor; background: transparent; align-items: center; justify-content: center; cursor: pointer; }
 .menu-btn span, .menu-btn span::before, .menu-btn span::after { display: block; width: 18px; height: 1.5px; background: currentColor; position: relative; transition: transform .3s var(--ease), background .2s; }
 .menu-btn span::before, .menu-btn span::after { content: ""; position: absolute; left: 0; }
@@ -98,7 +97,7 @@ h3 { font-size: clamp(21px, 2vw, 25px); line-height: 1.25; }
 @media (max-width: 900px) {
   .nav, .header .nav-cta { display: none; }
   .menu-btn { display: inline-flex; }
-  .brand svg { height: 30px; }
+  .brand-mark { width: 168px; }
 }
 
 /* ---------- hero ---------- */
@@ -338,8 +337,9 @@ h3 { font-size: clamp(21px, 2vw, 25px); line-height: 1.25; }
 /* ---------- rodapé ---------- */
 .rodape { background: var(--ink); color: rgba(246,242,236,.78); padding: 72px 0 36px; font-size: 15px; }
 .rodape .wrap { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 40px; }
-.rodape .brand { color: var(--paper); margin-bottom: 18px; }
-.rodape .brand svg { height: 54px; }
+.rodape .brand { margin-bottom: 18px; }
+.rodape .brand-footer { display: inline-flex; padding: 9px 12px; background: var(--white); border-radius: 3px; }
+.rodape .brand-mark { width: 230px; }
 .rodape h4 { font-family: var(--sans); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--wood-soft); margin: 6px 0 16px; font-weight: 500; }
 .rodape a { text-decoration: none; }
 .rodape a:hover { color: var(--paper); text-decoration: underline; text-underline-offset: 4px; }

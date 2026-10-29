@@ -11,7 +11,7 @@ export function Hero() {
         <source type="image/webp" srcSet={`${S}/hero-1000.webp 1000w, ${S}/hero-1600.webp 1600w, ${S}/hero-2400.webp 2400w`} sizes="100vw" />
         <img
           src={`${S}/hero-1600.jpg`}
-          alt="Showroom da Di Pieva em Marília: cozinha planejada com ilha em pedra clara, armários cinza e madeira, e parede verde ao lado"
+          alt="Showroom da LINHARA em Marília: cozinha planejada com ilha em pedra clara, armários cinza e madeira, e parede verde ao lado"
           width={1600}
           height={900}
           fetchPriority="high"
@@ -46,7 +46,7 @@ const PROVAS = [
 
 export function Differentials() {
   return (
-    <section className="provas" aria-label="Por que a Di Pieva">
+    <section className="provas" aria-label="Por que a LINHARA">
       <div className="wrap">
         {PROVAS.map((x) => (
           <div className="prova revelar" key={x.t}>

@@ -107,7 +107,7 @@ function ProjectLightbox({
         </div>
         <a
           className="btn btn-light lb-pedir"
-          href={p ? linkWhats(`Olá! Vi o projeto "${p.titulo}" no site da Di Pieva e quero um orçamento de algo parecido.`) : linkWhats()}
+          href={p ? linkWhats(`Olá! Vi o projeto "${p.titulo}" no site da LINHARA e quero um orçamento de algo parecido.`) : linkWhats()}
           target="_blank"
           rel="noopener"
         >

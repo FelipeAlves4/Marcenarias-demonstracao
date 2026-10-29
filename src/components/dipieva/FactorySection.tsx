@@ -52,7 +52,7 @@ export function FactorySection() {
             poster={`${ASSETS}/video/fabrica-router-poster.webp`}
             width={478}
             height={850}
-            aria-label="Vídeo da router CNC da Di Pieva cortando uma chapa na fábrica em Marília"
+            aria-label="Vídeo da router CNC da LINHARA cortando uma chapa na fábrica em Marília"
           >
             <source src={`${ASSETS}/video/fabrica-router.webm`} type="video/webm" />
             <source src={`${ASSETS}/video/fabrica-router.mp4`} type="video/mp4" />

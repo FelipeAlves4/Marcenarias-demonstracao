@@ -23,8 +23,8 @@ export function Header() {
     <>
       <header className={`header${solid && !aberto ? " solid" : ""}`}>
         <div className="wrap">
-          <a className="brand" href="#topo" aria-label="Di Pieva Ambientes Planejados, início">
-            <svg viewBox="0 0 1352 304" aria-hidden="true"><use href="#logo-curto" /></svg>
+          <a className="brand" href="#topo" aria-label="LINHARA Ambientes Planejados, início">
+            <img className="brand-mark" src="/brand/linhara-wordmark.png" alt="LINHARA Ambientes Planejados" width={1140} height={300} />
           </a>
           <nav className="nav" aria-label="Principal">
             {NAV.map((n) => <a key={n.href} href={n.href}>{n.label}</a>)}

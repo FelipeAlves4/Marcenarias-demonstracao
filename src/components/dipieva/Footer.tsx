@@ -29,7 +29,7 @@ export function FinalCta() {
   return (
     <section className="section final">
       <div className="wrap revelar">
-        <span className="eyebrow" style={{ color: "#F0E3D1" }}>Di Pieva Ambientes Planejados</span>
+        <span className="eyebrow" style={{ color: "#F0E3D1" }}>LINHARA Ambientes Planejados</span>
         <h2>Seu ambiente começa com uma conversa.</h2>
         <p>Mande uma foto do espaço e o que você imagina. A gente responde pelo WhatsApp.</p>
         <div className="acoes">
@@ -43,34 +43,37 @@ export function FinalCta() {
 
 export function Footer() {
   const [ano, setAno] = useState(2026);
+  const mostrarEndereco = Boolean(MARCA.enderecoRua || MARCA.enderecoBairro || MARCA.mapa);
   useEffect(() => setAno(new Date().getFullYear()), []);
   return (
     <footer className="rodape">
       <div className="wrap">
         <div>
-          <a className="brand" href="#topo" aria-label="Voltar ao início">
-            <svg viewBox="0 0 1352 304" aria-hidden="true"><use href="#logo" /></svg>
+          <a className="brand brand-footer" href="#topo" aria-label="Voltar ao início">
+            <img className="brand-mark" src="/brand/linhara-wordmark.png" alt="LINHARA Ambientes Planejados" width={1140} height={300} />
           </a>
           <p style={{ margin: 0, maxWidth: "34ch" }}>Móveis planejados sob medida, projetados em 3D, fabricados em Marília e montados pela nossa equipe.</p>
         </div>
         <div>
           <h4>Contato</h4>
           <ul>
-            <li><WaLink msg="Olá! Vim pelo site da Di Pieva.">WhatsApp {MARCA.whatsappExibicao}</WaLink></li>
+            <li><WaLink msg="Olá! Vim pelo site da LINHARA.">WhatsApp {MARCA.whatsappExibicao}</WaLink></li>
             <li><a href={MARCA.instagram} target="_blank" rel="noopener">Instagram {MARCA.instagramUser}</a></li>
             <li><a href={MARCA.facebook} target="_blank" rel="noopener">Facebook</a></li>
           </ul>
         </div>
-        <div>
-          <h4>Showroom</h4>
-          <ul>
-            <li>{MARCA.enderecoRua}</li>
-            <li>{MARCA.enderecoBairro}</li>
-            <li><a href={MARCA.mapa} target="_blank" rel="noopener">Ver no mapa</a></li>
-          </ul>
-        </div>
+        {mostrarEndereco && (
+          <div>
+            <h4>Showroom</h4>
+            <ul>
+              {MARCA.enderecoRua && <li>{MARCA.enderecoRua}</li>}
+              {MARCA.enderecoBairro && <li>{MARCA.enderecoBairro}</li>}
+              {MARCA.mapa && <li><a href={MARCA.mapa} target="_blank" rel="noopener">Ver no mapa</a></li>}
+            </ul>
+          </div>
+        )}
         <div className="legal">
-          <span>© {ano} {MARCA.nome} Ltda · CNPJ {MARCA.cnpj} · antiga Breda Móveis Planejados</span>
+          <span>© {ano} {MARCA.nome} · CNPJ {MARCA.cnpj}</span>
           <span>Este site usa cookies do Google Ads apenas para medir o resultado dos anúncios. Não pedimos nem guardamos seus dados pessoais.</span>
           <span className="creditos-site">Site desenvolvido por Alves Web Studio</span>
         </div>
