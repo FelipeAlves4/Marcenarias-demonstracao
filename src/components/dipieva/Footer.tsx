@@ -72,6 +72,7 @@ export function Footer() {
         <div className="legal">
           <span>© {ano} {MARCA.nome} Ltda · CNPJ {MARCA.cnpj} · antiga Breda Móveis Planejados</span>
           <span>Este site usa cookies do Google Ads apenas para medir o resultado dos anúncios. Não pedimos nem guardamos seus dados pessoais.</span>
+          <span className="creditos-site">Site desenvolvido por Alves Web Studio</span>
         </div>
       </div>
     </footer>

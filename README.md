@@ -1,24 +1,18 @@
-# Screenshot Match
+# Di Pieva Ambientes Planejados
 
-Implement exactly the screenshot and nothing else
+Site institucional da Di Pieva Ambientes Planejados, desenvolvido por Alves Web Studio.
 
-This project was built with [Lovable](https://lovable.dev).
+## Desenvolvimento
 
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/22e21380-177f-4262-a200-be476cf84ee4).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+Requer Bun 1.2+ ou Node.js 20+.
 
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
+bun install
+bun run dev
+```
+
+Para gerar a versão de produção:
+
+```sh
+bun run build
 ```
